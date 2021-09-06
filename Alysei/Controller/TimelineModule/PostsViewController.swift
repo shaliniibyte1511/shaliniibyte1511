@@ -16,6 +16,7 @@ class PostsViewController: AlysieBaseViewC {
     
     @IBOutlet weak var postTableView: UITableView!
     @IBOutlet weak var marketplaceView: UIView!
+    @IBOutlet weak var recipesView: UIView!
     //@IBOutlet weak var postView: UIView!
     
     var scrollCallBack: (() -> Void)? = nil
@@ -34,6 +35,8 @@ class PostsViewController: AlysieBaseViewC {
         let tap = UITapGestureRecognizer(target: self, action: #selector(openMarketPlace))
         self.marketplaceView.addGestureRecognizer(tap)
         
+        let tapRecipe = UITapGestureRecognizer(target: self, action: #selector(openRecipes))
+        self.recipesView.addGestureRecognizer(tapRecipe)
         
         // Do any additional setup after loading the view.
     }
@@ -94,7 +97,13 @@ class PostsViewController: AlysieBaseViewC {
         self.hidesBottomBarWhenPushed = true
         //self.tabBarController?.tabBar.bounds.height = 0
     }
-   
+    @objc func openRecipes(){
+      
+        guard let vc = UIStoryboard(name: StoryBoardConstants.kRecipesSelection, bundle: nil).instantiateViewController(identifier: "CuisinePageControlViewController") as? CuisinePageControlViewController else {return}
+        self.navigationController?.pushViewController(vc, animated: true)
+        self.hidesBottomBarWhenPushed = true
+    }
+
    
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         // calculates where the user is in the y-axis

@@ -112,6 +112,33 @@ struct  AlertMessage{
     static let kUploadImage          = "Please upload image."
     static let kRoleSelection          = "Please choose the role."
     static let kValidPassword          = "Your password should contain atleast 8 characters, 1 special character and 1 number."
+    static let kEnterName = "Please Enter Name."
+    static let kSelectCookingSkill = "Please Select Cooking Skill."
+    static let kSelectCousin = "Please select Cuisine."
+    static let kSelectMeal = "Please select Meal."
+    static let kSelectCourse = "Please select Course."
+    static let kSelectDiet = "Please select Diet."
+    static let kSelectHour = "Please select Preparation Time."
+    static let kSelecForPeople = "Please select for how much people you are cooking."
+    static let kSelecForFoodIntolerance = "Please select Food Intolerance."
+    static let kSelectRegion = "Please select Region."
+    static let kImagepicker = "This feature is not available."
+    static let kEnterIngridientName = "Please Enter Ingridient Name."
+    static let kEnterToolName = "Please Enter Tool Name."
+    static let kSelectCategory = "Please Select a Category."
+    static let kEnterDescription = "Please Enter Description."
+
+}
+struct LabelandTextFieldTitle{
+    static let recipeName = "Recipe Name"
+    static let selectCookingSkill = "Select Cooking Skill"
+    static let selectCourse = "Select Course"
+    static let selectCuisine = "Select Cuisine"
+    static let selectMeal = "Select Meal"
+    static let selectDiet = "Select Diet"
+    static let selectRegion = "Select Region"
+    static let selectFoodIntolerance = "Select Food Intolerance"
+    static let selectCategory = "Select a Category"
     
 }
 
@@ -130,6 +157,7 @@ struct StoryBoardConstants {
     static let kHubs = "Hubs"
     static let kMarketplace = "Marketplace"
     static let kHubSelection = "HubSelection"
+    static let kRecipesSelection = "Recipe"
 }
 
 struct ButtonTitle {
@@ -274,6 +302,30 @@ struct APIUrl{
     enum B2BModule {
         //static let kKeywordSearch = "search?search_type=3&keyword="
         static let kSearchApi = "search?search_type="
+        
+    }
+    
+    enum Recipes {
+        static let getrecipeCategory = kBASEURL + "get/recipe/categories"
+        static let getrecipeIngridents = kBASEURL + "get/recipe/ingredients"
+        static let getrecipeTools = kBASEURL + "get/recipe/tools"
+        static let getrecipeRegion = kBASEURL + "get/recipe/regions?cousin_id=1"
+        static let getrecipeMeal = kBASEURL + "get/recipe/meals"
+        static let getrecipeCources = kBASEURL + "get/recipe/courses"
+        static let getMyrecipe = kBASEURL + "get/myrecipes"
+        static let createRecipe = kBASEURL + "create/recipe"
+        static let getCuisine = kBASEURL + "get/all/cousins"
+        static let getCookingSkill = kBASEURL + "get/cooking/skills"
+        static let getRecipeDiet = kBASEURL + "get/diet/list"
+        static let getFoodIntolerance = kBASEURL + "get/food/intolerance"
+        static let addNewIngridient = kBASEURL + "add/ingredients"
+        static let saveRecipe = kBASEURL + "create/recipe"
+//        static let draftRecipe = kBASEURL + "save/in/draft/recipe"
+        static let draftRecipe = kBASEURL + "save/update/draft/recipe/3"
+        
+        static let getMyRecipe = kBASEURL + "get/myrecipes"
+        static let getHomeScreen = kBASEURL + "get/home/screen"
+        static let getMyFavRecipe = kBASEURL + "my/favourite/recipes"
         
     }
 }
@@ -515,6 +567,29 @@ struct APIConstants {
     static let kfavourite_type  = "favourite_type"
     static let kRating = "rating"
     static let kReview = "review"
+    static let kCousinId = "cousin_id"
+    static let kCategory = "category"
+    static let kIngridientTitle = "title"
+    static let kIngridientImage = "image_id"
+    static let kMealId = "meal_id"
+    static let kCourseId = "course_id"
+    static let kHours = "hours"
+    static let kminutes = "minutes"
+    static let kServing = "serving"
+    static let kRegionId = "region_id"
+    static let kDietId = "diet_id"
+    static let kIntoleranceId = "intolerance_id"
+    static let kCookingSkillId = "cooking_skill_id"
+    static let kSavedCategory = "save_categories"
+    static let kSavedIngridient = "saved_ingredients"
+    static let kSavedTools = "saved_tools"
+    static let kIngridientId = "ingredient_id"
+    static let kQuantity = "quantity"
+    static let kUnit = "unit"
+    static let kToolId = "tool_id"
+    static let kRecipeStep = "recipe_steps"
+    static let kIngridients = "ingredients"
+    static let kTools = "tools"
 }
 
 struct OtherConstant {
